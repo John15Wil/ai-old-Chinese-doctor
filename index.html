@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>简单交互示例</title>
+    <style>
+        /* 基础样式 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        /* 按钮样式 */
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* 交互反馈 */
+        #message {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>点击按钮试试</h1>
+        <button onclick="showMessage()">点我</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        // 交互功能
+        function showMessage() {
+            // 显示弹窗
+            alert('你好，世界！');
+            
+            // 更新页面文字
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = `您点击于：${new Date().toLocaleTimeString()}`;
+        }
+    </script>
+</body>
+</html> 
